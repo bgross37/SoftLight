@@ -12,8 +12,6 @@
 #include <SoftLight.h>
 
 
-char          password[] =                  "priscilla6824015870";               // your network password
-char          ssid[] =                      "nittygritty";                   // your network SSID
 
 #define ONE_pin D5
 #define TWO_pin D6

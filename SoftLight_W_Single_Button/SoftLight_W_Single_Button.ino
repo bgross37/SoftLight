@@ -11,10 +11,9 @@
 #include <SoftAlarm.h>
 #include <SoftLight.h>
 #include "ClickButton.h"
+#include "WifiCredentials.h"
 
 
-char          password[] =                  "priscilla6824015870";               // your network password
-char          ssid[] =                      "nittygritty";                   // your network SSID
 
 #define LED_pin D6
 #define BUTTON_pin D3
