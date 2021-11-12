@@ -16,6 +16,9 @@
 		AF01930A273EBE9D0036A2D0 /* SoftLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019309273EBE9D0036A2D0 /* SoftLightTests.swift */; };
 		AF019314273EBE9D0036A2D0 /* SoftLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019313273EBE9D0036A2D0 /* SoftLightUITests.swift */; };
 		AF019316273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019315273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift */; };
+		AF019323273EF4170036A2D0 /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019322273EF4170036A2D0 /* WebSocketHandler.swift */; };
+		AF019325273EF8440036A2D0 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019324273EF8440036A2D0 /* AddView.swift */; };
+		AF019327273EFB820036A2D0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019326273EFB820036A2D0 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		AF01930F273EBE9D0036A2D0 /* SoftLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoftLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF019313273EBE9D0036A2D0 /* SoftLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightUITests.swift; sourceTree = "<group>"; };
 		AF019315273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF019322273EF4170036A2D0 /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
+		AF019324273EF8440036A2D0 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		AF019326273EFB820036A2D0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +104,13 @@
 		AF0192F2273EBE9B0036A2D0 /* SoftLight */ = {
 			isa = PBXGroup;
 			children = (
+				AF019322273EF4170036A2D0 /* WebSocketHandler.swift */,
 				AF0192F3273EBE9B0036A2D0 /* SoftLightApp.swift */,
 				AF0192F5273EBE9B0036A2D0 /* ContentView.swift */,
-				AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */,
+				AF019324273EF8440036A2D0 /* AddView.swift */,
 				AF0192FC273EBE9D0036A2D0 /* Persistence.swift */,
+				AF019326273EFB820036A2D0 /* Styles.swift */,
+				AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */,
 				AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */,
 				AF0192F9273EBE9D0036A2D0 /* Preview Content */,
 			);
@@ -263,7 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF019323273EF4170036A2D0 /* WebSocketHandler.swift in Sources */,
+				AF019327273EFB820036A2D0 /* Styles.swift in Sources */,
 				AF0192FD273EBE9D0036A2D0 /* Persistence.swift in Sources */,
+				AF019325273EF8440036A2D0 /* AddView.swift in Sources */,
 				AF0192F6273EBE9B0036A2D0 /* ContentView.swift in Sources */,
 				AF019300273EBE9D0036A2D0 /* SoftLight.xcdatamodeld in Sources */,
 				AF0192F4273EBE9B0036A2D0 /* SoftLightApp.swift in Sources */,
