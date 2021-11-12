@@ -20,31 +20,40 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(devices) { device in
-                    NavigationLink {
-                    
-                    } label: {
-                        Text(device.friendlyName ?? "-")
+            ZStack {
+                Color("background").edgesIgnoringSafeArea(.all)
+                VStack{
+                    Text("SoftLight").padding(.top, -40).titleStyle()
+                    List {
+                        ForEach(devices) { device in
+                            NavigationLink(destination: DetailView(device: device)) {
+                                Text(device.friendlyName ?? "-")
+                            }
+                        }
+                        .onDelete(perform: deleteItems)
+                        
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            EditButton()
+                        }
+                        ToolbarItem {
+                            Button(action: { self.showingAddDevice.toggle() }) {
+                                Label("Add Item", systemImage: "plus")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $showingAddDevice){
+                        AddView().environment(\.managedObjectContext, self.viewContext)
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: { self.showingAddDevice.toggle() }) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            .sheet(isPresented: $showingAddDevice){
-                AddView().environment(\.managedObjectContext, self.viewContext)
-            }
-            Text("Select an item")
+            .padding(-1.0)
         }
+    }
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -65,6 +74,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView().preferredColorScheme(.dark).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

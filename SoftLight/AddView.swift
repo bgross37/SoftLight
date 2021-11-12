@@ -14,11 +14,6 @@ struct AddView: View {
     @State private var ip = ""
     @State private var deviceType = ""
     @State private var friendlyName = ""
-    let deviceTypes = ["Single Light", "RGBW"]
-    
-    let backgroundGradient = Gradient(colors: [.black, .pink]);
-    
-    
     
     var body: some View {
             VStack(alignment: .center, spacing: 20){
@@ -39,9 +34,9 @@ struct AddView: View {
                     } catch{
                         print("Whoops \(error.localizedDescription)")
                     }
-                }.buttonStyle(SoftLightButtonStyle(bgColor: Color(hex: 0x465469)))
+                }.buttonStyle(SoftLightButtonStyle(bgColor: Color("AccentColor")))
                 Spacer()
-            }.background(ColorLibrary.backgroundGradient.edgesIgnoringSafeArea(.all))
+            }.background(Color("background").edgesIgnoringSafeArea(.all))
             .opacity(0.8)
     }
 }

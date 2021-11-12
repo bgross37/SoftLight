@@ -19,6 +19,7 @@
 		AF019323273EF4170036A2D0 /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019322273EF4170036A2D0 /* WebSocketHandler.swift */; };
 		AF019325273EF8440036A2D0 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019324273EF8440036A2D0 /* AddView.swift */; };
 		AF019327273EFB820036A2D0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019326273EFB820036A2D0 /* Styles.swift */; };
+		AF019329273F00530036A2D0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019328273F00530036A2D0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		AF019322273EF4170036A2D0 /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
 		AF019324273EF8440036A2D0 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		AF019326273EFB820036A2D0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		AF019328273F00530036A2D0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				AF0192F3273EBE9B0036A2D0 /* SoftLightApp.swift */,
 				AF0192F5273EBE9B0036A2D0 /* ContentView.swift */,
 				AF019324273EF8440036A2D0 /* AddView.swift */,
+				AF019328273F00530036A2D0 /* DetailView.swift */,
 				AF0192FC273EBE9D0036A2D0 /* Persistence.swift */,
 				AF019326273EFB820036A2D0 /* Styles.swift */,
 				AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */,
@@ -158,6 +161,8 @@
 			dependencies = (
 			);
 			name = SoftLight;
+			packageProductDependencies = (
+			);
 			productName = SoftLight;
 			productReference = AF0192F0273EBE9B0036A2D0 /* SoftLight.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +235,8 @@
 				Base,
 			);
 			mainGroup = AF0192E7273EBE9B0036A2D0;
+			packageReferences = (
+			);
 			productRefGroup = AF0192F1273EBE9B0036A2D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF019323273EF4170036A2D0 /* WebSocketHandler.swift in Sources */,
+				AF019329273F00530036A2D0 /* DetailView.swift in Sources */,
 				AF019327273EFB820036A2D0 /* Styles.swift in Sources */,
 				AF0192FD273EBE9D0036A2D0 /* Persistence.swift in Sources */,
 				AF019325273EF8440036A2D0 /* AddView.swift in Sources */,
