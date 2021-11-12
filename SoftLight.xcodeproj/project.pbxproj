@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF0192F4273EBE9B0036A2D0 /* SoftLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0192F3273EBE9B0036A2D0 /* SoftLightApp.swift */; };
+		AF0192F6273EBE9B0036A2D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0192F5273EBE9B0036A2D0 /* ContentView.swift */; };
+		AF0192F8273EBE9D0036A2D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */; };
+		AF0192FB273EBE9D0036A2D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0192FA273EBE9D0036A2D0 /* Preview Assets.xcassets */; };
+		AF0192FD273EBE9D0036A2D0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0192FC273EBE9D0036A2D0 /* Persistence.swift */; };
+		AF019300273EBE9D0036A2D0 /* SoftLight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */; };
+		AF01930A273EBE9D0036A2D0 /* SoftLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019309273EBE9D0036A2D0 /* SoftLightTests.swift */; };
+		AF019314273EBE9D0036A2D0 /* SoftLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019313273EBE9D0036A2D0 /* SoftLightUITests.swift */; };
+		AF019316273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019315273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF019306273EBE9D0036A2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0192E8273EBE9B0036A2D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0192EF273EBE9B0036A2D0;
+			remoteInfo = SoftLight;
+		};
+		AF019310273EBE9D0036A2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0192E8273EBE9B0036A2D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0192EF273EBE9B0036A2D0;
+			remoteInfo = SoftLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF0192F0273EBE9B0036A2D0 /* SoftLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0192F3273EBE9B0036A2D0 /* SoftLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightApp.swift; sourceTree = "<group>"; };
+		AF0192F5273EBE9B0036A2D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF0192FA273EBE9D0036A2D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF0192FC273EBE9D0036A2D0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		AF0192FF273EBE9D0036A2D0 /* SoftLight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoftLight.xcdatamodel; sourceTree = "<group>"; };
+		AF019305273EBE9D0036A2D0 /* SoftLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoftLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF019309273EBE9D0036A2D0 /* SoftLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightTests.swift; sourceTree = "<group>"; };
+		AF01930F273EBE9D0036A2D0 /* SoftLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoftLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF019313273EBE9D0036A2D0 /* SoftLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightUITests.swift; sourceTree = "<group>"; };
+		AF019315273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF0192ED273EBE9B0036A2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF019302273EBE9D0036A2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF01930C273EBE9D0036A2D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF0192E7273EBE9B0036A2D0 = {
+			isa = PBXGroup;
+			children = (
+				AF0192F2273EBE9B0036A2D0 /* SoftLight */,
+				AF019308273EBE9D0036A2D0 /* SoftLightTests */,
+				AF019312273EBE9D0036A2D0 /* SoftLightUITests */,
+				AF0192F1273EBE9B0036A2D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF0192F1273EBE9B0036A2D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF0192F0273EBE9B0036A2D0 /* SoftLight.app */,
+				AF019305273EBE9D0036A2D0 /* SoftLightTests.xctest */,
+				AF01930F273EBE9D0036A2D0 /* SoftLightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF0192F2273EBE9B0036A2D0 /* SoftLight */ = {
+			isa = PBXGroup;
+			children = (
+				AF0192F3273EBE9B0036A2D0 /* SoftLightApp.swift */,
+				AF0192F5273EBE9B0036A2D0 /* ContentView.swift */,
+				AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */,
+				AF0192FC273EBE9D0036A2D0 /* Persistence.swift */,
+				AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */,
+				AF0192F9273EBE9D0036A2D0 /* Preview Content */,
+			);
+			path = SoftLight;
+			sourceTree = "<group>";
+		};
+		AF0192F9273EBE9D0036A2D0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF0192FA273EBE9D0036A2D0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF019308273EBE9D0036A2D0 /* SoftLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF019309273EBE9D0036A2D0 /* SoftLightTests.swift */,
+			);
+			path = SoftLightTests;
+			sourceTree = "<group>";
+		};
+		AF019312273EBE9D0036A2D0 /* SoftLightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF019313273EBE9D0036A2D0 /* SoftLightUITests.swift */,
+				AF019315273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift */,
+			);
+			path = SoftLightUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF0192EF273EBE9B0036A2D0 /* SoftLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF019319273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLight" */;
+			buildPhases = (
+				AF0192EC273EBE9B0036A2D0 /* Sources */,
+				AF0192ED273EBE9B0036A2D0 /* Frameworks */,
+				AF0192EE273EBE9B0036A2D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoftLight;
+			productName = SoftLight;
+			productReference = AF0192F0273EBE9B0036A2D0 /* SoftLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF019304273EBE9D0036A2D0 /* SoftLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF01931C273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLightTests" */;
+			buildPhases = (
+				AF019301273EBE9D0036A2D0 /* Sources */,
+				AF019302273EBE9D0036A2D0 /* Frameworks */,
+				AF019303273EBE9D0036A2D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF019307273EBE9D0036A2D0 /* PBXTargetDependency */,
+			);
+			name = SoftLightTests;
+			productName = SoftLightTests;
+			productReference = AF019305273EBE9D0036A2D0 /* SoftLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF01930E273EBE9D0036A2D0 /* SoftLightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF01931F273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLightUITests" */;
+			buildPhases = (
+				AF01930B273EBE9D0036A2D0 /* Sources */,
+				AF01930C273EBE9D0036A2D0 /* Frameworks */,
+				AF01930D273EBE9D0036A2D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF019311273EBE9D0036A2D0 /* PBXTargetDependency */,
+			);
+			name = SoftLightUITests;
+			productName = SoftLightUITests;
+			productReference = AF01930F273EBE9D0036A2D0 /* SoftLightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF0192E8273EBE9B0036A2D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					AF0192EF273EBE9B0036A2D0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					AF019304273EBE9D0036A2D0 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AF0192EF273EBE9B0036A2D0;
+					};
+					AF01930E273EBE9D0036A2D0 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = AF0192EF273EBE9B0036A2D0;
+					};
+				};
+			};
+			buildConfigurationList = AF0192EB273EBE9B0036A2D0 /* Build configuration list for PBXProject "SoftLight" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF0192E7273EBE9B0036A2D0;
+			productRefGroup = AF0192F1273EBE9B0036A2D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF0192EF273EBE9B0036A2D0 /* SoftLight */,
+				AF019304273EBE9D0036A2D0 /* SoftLightTests */,
+				AF01930E273EBE9D0036A2D0 /* SoftLightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF0192EE273EBE9B0036A2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0192FB273EBE9D0036A2D0 /* Preview Assets.xcassets in Resources */,
+				AF0192F8273EBE9D0036A2D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF019303273EBE9D0036A2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF01930D273EBE9D0036A2D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF0192EC273EBE9B0036A2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF0192FD273EBE9D0036A2D0 /* Persistence.swift in Sources */,
+				AF0192F6273EBE9B0036A2D0 /* ContentView.swift in Sources */,
+				AF019300273EBE9D0036A2D0 /* SoftLight.xcdatamodeld in Sources */,
+				AF0192F4273EBE9B0036A2D0 /* SoftLightApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF019301273EBE9D0036A2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF01930A273EBE9D0036A2D0 /* SoftLightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF01930B273EBE9D0036A2D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF019314273EBE9D0036A2D0 /* SoftLightUITests.swift in Sources */,
+				AF019316273EBE9D0036A2D0 /* SoftLightUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF019307273EBE9D0036A2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0192EF273EBE9B0036A2D0 /* SoftLight */;
+			targetProxy = AF019306273EBE9D0036A2D0 /* PBXContainerItemProxy */;
+		};
+		AF019311273EBE9D0036A2D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0192EF273EBE9B0036A2D0 /* SoftLight */;
+			targetProxy = AF019310273EBE9D0036A2D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AF019317273EBE9D0036A2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF019318273EBE9D0036A2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF01931A273EBE9D0036A2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoftLight/Preview Content\"";
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF01931B273EBE9D0036A2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SoftLight/Preview Content\"";
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF01931D273EBE9D0036A2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoftLight.app/SoftLight";
+			};
+			name = Debug;
+		};
+		AF01931E273EBE9D0036A2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoftLight.app/SoftLight";
+			};
+			name = Release;
+		};
+		AF019320273EBE9D0036A2D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoftLight;
+			};
+			name = Debug;
+		};
+		AF019321273EBE9D0036A2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TT2PSKR6WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.SoftLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoftLight;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF0192EB273EBE9B0036A2D0 /* Build configuration list for PBXProject "SoftLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF019317273EBE9D0036A2D0 /* Debug */,
+				AF019318273EBE9D0036A2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF019319273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF01931A273EBE9D0036A2D0 /* Debug */,
+				AF01931B273EBE9D0036A2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF01931C273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF01931D273EBE9D0036A2D0 /* Debug */,
+				AF01931E273EBE9D0036A2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF01931F273EBE9D0036A2D0 /* Build configuration list for PBXNativeTarget "SoftLightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF019320273EBE9D0036A2D0 /* Debug */,
+				AF019321273EBE9D0036A2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF0192FF273EBE9D0036A2D0 /* SoftLight.xcdatamodel */,
+			);
+			currentVersion = AF0192FF273EBE9D0036A2D0 /* SoftLight.xcdatamodel */;
+			path = SoftLight.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF0192E8273EBE9B0036A2D0 /* Project object */;
+}
