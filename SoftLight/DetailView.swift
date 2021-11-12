@@ -8,18 +8,31 @@
 import SwiftUI
 
 struct DetailView: View {
+    @State private var wSliderValue: Double = 0
+    
+    let device: Device
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("background").ignoresSafeArea(.all)
+            VStack{
+                Text(device.friendlyName ?? "--").titleStyle()
+                Slider(value: $wSliderValue, in: 0...255).padding()
+            }
+        }
     }
     
     init(device: Device){
-        
+        self.device = device
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(device: Device())
+        DetailView(device: PersistenceController.preview.container.viewContext.registeredObjects.first(where: { $0 is Device }) as! Device)
             .preferredColorScheme(.dark)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
+    
+    
 }
