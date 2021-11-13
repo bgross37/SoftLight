@@ -72,6 +72,16 @@ struct ContentView: View {
     }
 }
 
+
+//thoughts:
+// OnAppear: tell WSHander to connect to ALL
+// When clicking to DetailView, hand it the appropriate WS connection
+
+
+
+
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().preferredColorScheme(.dark).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

@@ -22,6 +22,19 @@ class SoftLightTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testMessageBuildZeros() {
+        let message = PackedMessage(hue: 0, sat: 0, val: 0, white: 0)
+        
+        XCTAssertEqual(message.generateStringMessage(), "#00000000")
+    }
+    
+    func testMessageBuildMax() {
+        let message = PackedMessage(hue: 255, sat: 255, val: 255, white: 255)
+        
+        XCTAssertEqual(message.generateStringMessage(), "#FFFFFFFF")
+    }
+    
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

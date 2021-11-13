@@ -14,9 +14,8 @@ struct SoftLightApp: App {
     let persistenceController = PersistenceController.shared
     
     init() {
-        //initialize Sockets.IO
         //make array of established devices
-        //connect websockets
+        //connect the websockets
     }
 
     var body: some Scene {

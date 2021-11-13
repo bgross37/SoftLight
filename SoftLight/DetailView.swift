@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
+    @State private var hSliderValue: Double = 0
+    @State private var sSliderValue: Double = 0
+    @State private var vSliderValue: Double = 0
     @State private var wSliderValue: Double = 0
     
     let device: Device
@@ -17,14 +20,27 @@ struct DetailView: View {
             Color("background").ignoresSafeArea(.all)
             VStack{
                 Text(device.friendlyName ?? "--").titleStyle()
-                Slider(value: $wSliderValue, in: 0...255).padding()
+                Text("Hue").padding(.top)
+                Slider(value: $hSliderValue, in: 0...255).padding([.leading, .bottom, .trailing])
+                Text("Saturation").padding(.top)
+                Slider(value: $sSliderValue, in: 0...255).padding([.leading, .bottom, .trailing])
+                Text("Value").padding(.top)
+                Slider(value: $vSliderValue, in: 0...255).padding([.leading, .bottom, .trailing])
+                Text("White").padding(.top)
+                Slider(value: $wSliderValue, in: 0...255).padding([.leading, .bottom, .trailing])
             }
         }
+        .onAppear(perform: onAppear)
     }
     
     init(device: Device){
         self.device = device
     }
+    
+    private func onAppear(){
+        //make sure WS is connected
+    }
+                  
 }
 
 struct DetailView_Previews: PreviewProvider {
