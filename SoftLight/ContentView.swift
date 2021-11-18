@@ -17,6 +17,8 @@ struct ContentView: View {
     private var devices: FetchedResults<Device>
     
     @State private var showingAddDevice = false
+    
+    @StateObject var websockethandler = WebSocketHandler()
 
     var body: some View {
         NavigationView {
@@ -54,6 +56,9 @@ struct ContentView: View {
     
     init() {
         UITableView.appearance().backgroundColor = UIColor.clear
+        
+        websockethandler.createWebsockets(devices: ["mirror.local"])
+        websockethandler.connectAll()
     }
 
     private func deleteItems(offsets: IndexSet) {

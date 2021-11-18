@@ -16,6 +16,7 @@ struct SoftLightApp: App {
     init() {
         //make array of established devices
         //connect the websockets
+        
     }
 
     var body: some Scene {

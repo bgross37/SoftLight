@@ -11,13 +11,17 @@ import SwiftUI
 
 
 class WebSocketHandler: ObservableObject{
-    var websockets = [WebSocketConnection]()
+    @Published var websockets = [WebSocketConnection]()
     
-    init(devices: Array<Device>){
+    init(){
+        
+    }
+    
+    func createWebsockets(devices: Array<String>){
         for device in devices {
-            if let ip = device.ip {
-                websockets.append(WebSocketConnection(ip: ip))
-            }
+            //if let ip = device.ip {
+                websockets.append(WebSocketConnection(ip: device))
+            //}
         }
     }
     
@@ -35,7 +39,7 @@ class WebSocketHandler: ObservableObject{
     
     func broadcastMessage(message: PackedMessage){
         for websocket in websockets {
-            websocket.sendMessage(message: message)
+            //websocket.sendMessage(message: message)
         }
     }
     
@@ -46,27 +50,77 @@ class WebSocketHandler: ObservableObject{
 }
 
 
-class WebSocketConnection {
+class WebSocketConnection: ObservableObject {
     var ip: String
+    private var id:
+    UUID!
+    private let session: URLSession
+    var socket: URLSessionWebSocketTask!
     
     init(ip: String){
         self.ip = ip
+        self.session = URLSession(configuration: .default)
+        self.connect()
     }
     
     func connect(){
-        
+        self.socket = session.webSocketTask(with: URL(string: "ws://" + self.ip)!)
+        self.listen()
+        self.socket.resume()
     }
     
     func disconnect(){
-        
+        self.socket.cancel(with: URLSessionWebSocketTask.CloseCode.normalClosure, reason: nil)
     }
     
-    func sendMessage(message: PackedMessage){
-        
+    func listen() {
+        self.socket.receive { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+                case .failure(_):
+                /*case .failure(let error):
+                  print(error)
+                  let alert = Alert(
+                      title: Text("Unable to connect to server!"),
+                      dismissButton: .default(Text("Retry")) {
+                        self.socket.cancel(with: .goingAway, reason: nil)
+                        self.connect()
+                      }
+                  )
+                */
+                    return
+                case .success(let message):
+                switch message {
+                    case .data(let data):
+                        print(data)
+                    case .string(let str):
+                        self.handle(str)
+                    @unknown default:
+                        break
+                }
+            }
+            self.listen()
+        }
+    }
+    
+    func handle(_ data: String) {
+        print(data)
+    }
+    
+    func sendMessage(message: PackedMessage) async{
+        do {
+            try await self.socket.send(.string(message.generateStringMessage()))
+        }
+        catch {
+            print(error)
+        }
     }
     
     func requestStatus() -> PackedMessage{
-        return PackedMessage(hue: 0, sat: 0, val: 0, white: 0)
+        let message: String = "#123456FF"
+
+        
+        return PackedMessage(hexString: message)
     }
     
 }
@@ -79,7 +133,16 @@ protocol SoftLightMessage {
     func generateStringMessage() -> String
 }
 
-class PackedMessage: SoftLightMessage {
+class PackedMessage: SoftLightMessage, Equatable {
+    static func == (lhs: PackedMessage, rhs: PackedMessage) -> Bool {
+        if(lhs.hue == rhs.hue && lhs.sat == rhs.sat && lhs.val == rhs.val && lhs.white == rhs.white) {
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
     var hue: Int
     var sat: Int
     var val: Int
@@ -90,6 +153,20 @@ class PackedMessage: SoftLightMessage {
         self.sat = sat
         self.val = val
         self.white = white
+    }
+    
+    init(hexString: String){
+        self.hue = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 1)...hexString.index(hexString.startIndex, offsetBy: 2)], radix: 16) ?? 0
+        self.sat = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 3)...hexString.index(hexString.startIndex, offsetBy: 4)], radix: 16) ?? 0
+        self.val = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 5)...hexString.index(hexString.startIndex, offsetBy: 6)], radix: 16) ?? 0
+        self.white = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 7)...hexString.index(hexString.startIndex, offsetBy: 8)], radix: 16) ?? 0
+    }
+    
+    func setHex(hexString: String){
+        self.hue = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 1)...hexString.index(hexString.startIndex, offsetBy: 2)], radix: 16) ?? 0
+        self.sat = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 3)...hexString.index(hexString.startIndex, offsetBy: 4)], radix: 16) ?? 0
+        self.val = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 5)...hexString.index(hexString.startIndex, offsetBy: 6)], radix: 16) ?? 0
+        self.white = Int(hexString[hexString.index(hexString.startIndex, offsetBy: 7)...hexString.index(hexString.startIndex, offsetBy: 8)], radix: 16) ?? 0
     }
     
     func generateStringMessage() -> String {

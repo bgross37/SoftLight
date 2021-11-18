@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct DetailView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @EnvironmentObject var websockethandler: WebSocketHandler
+    
     @State private var hSliderValue: Double = 0
     @State private var sSliderValue: Double = 0
     @State private var vSliderValue: Double = 0
     @State private var wSliderValue: Double = 0
     
     let device: Device
+    
     
     var body: some View {
         ZStack{
@@ -35,6 +40,7 @@ struct DetailView: View {
     
     init(device: Device){
         self.device = device
+        
     }
     
     private func onAppear(){
