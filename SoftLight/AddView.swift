@@ -11,33 +11,38 @@ struct AddView: View {
     @Environment(\.managedObjectContext) var viewContext
     @Environment(\.presentationMode) var presentationMode
     
+    @EnvironmentObject var deviceCollection: DeviceCollection
+
+
+    
     @State private var ip = ""
-    @State private var deviceType = ""
     @State private var friendlyName = ""
     
     var body: some View {
             VStack(alignment: .center, spacing: 20){
                 Text("Add a Device").titleStyle()
                 Section{
-                    TextField("Address (192.168.1.10)", text: $ip)
+                    TextField("Address (mirror.local, etc)", text: $ip)
                         .padding()
                     TextField("Name", text: $friendlyName)
                         .padding()
                 }
                 Button("Add device"){
-                    let newDevice = Device(context: self.viewContext)
-                    newDevice.ip = self.ip
-                    newDevice.friendlyName = self.friendlyName
-                    do{
-                        try self.viewContext.save()
-                        self.presentationMode.wrappedValue.dismiss()
-                    } catch{
-                        print("Whoops \(error.localizedDescription)")
-                    }
+                    addItem()
                 }.buttonStyle(SoftLightButtonStyle(bgColor: Color("AccentColor")))
                 Spacer()
             }.background(Color("background").edgesIgnoringSafeArea(.all))
             .opacity(0.8)
+    }
+    
+    private func addItem(){
+        deviceCollection.addItem(context: self.viewContext, ip: self.ip, friendlyName: self.friendlyName)
+        self.presentationMode.wrappedValue.dismiss()
+        do {
+            try self.viewContext.save()
+        } catch{
+            print("Whoops \(error.localizedDescription)")
+        }
     }
 }
 

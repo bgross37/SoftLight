@@ -20,6 +20,11 @@
 		AF019325273EF8440036A2D0 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019324273EF8440036A2D0 /* AddView.swift */; };
 		AF019327273EFB820036A2D0 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019326273EFB820036A2D0 /* Styles.swift */; };
 		AF019329273F00530036A2D0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF019328273F00530036A2D0 /* DetailView.swift */; };
+		AF01932E2745D7520036A2D0 /* SoftLightProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF01932D2745D7520036A2D0 /* SoftLightProtocol.swift */; };
+		AF0193302745DBA30036A2D0 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF01932F2745DBA30036A2D0 /* Device+CoreDataClass.swift */; };
+		AF0193322745DBB20036A2D0 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0193312745DBB20036A2D0 /* Device+CoreDataProperties.swift */; };
+		AF0193342746AFC20036A2D0 /* DeviceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0193332746AFC20036A2D0 /* DeviceCollection.swift */; };
+		AF019337274B014E0036A2D0 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = AF019336274B014E0036A2D0 /* Starscream */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,10 @@
 		AF019324273EF8440036A2D0 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		AF019326273EFB820036A2D0 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		AF019328273F00530036A2D0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AF01932D2745D7520036A2D0 /* SoftLightProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftLightProtocol.swift; sourceTree = "<group>"; };
+		AF01932F2745DBA30036A2D0 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF0193312745DBB20036A2D0 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF0193332746AFC20036A2D0 /* DeviceCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF019337274B014E0036A2D0 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,10 @@
 				AF019328273F00530036A2D0 /* DetailView.swift */,
 				AF0192FC273EBE9D0036A2D0 /* Persistence.swift */,
 				AF019326273EFB820036A2D0 /* Styles.swift */,
+				AF01932D2745D7520036A2D0 /* SoftLightProtocol.swift */,
+				AF01932F2745DBA30036A2D0 /* Device+CoreDataClass.swift */,
+				AF0193312745DBB20036A2D0 /* Device+CoreDataProperties.swift */,
+				AF0193332746AFC20036A2D0 /* DeviceCollection.swift */,
 				AF0192F7273EBE9D0036A2D0 /* Assets.xcassets */,
 				AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */,
 				AF0192F9273EBE9D0036A2D0 /* Preview Content */,
@@ -162,6 +176,7 @@
 			);
 			name = SoftLight;
 			packageProductDependencies = (
+				AF019336274B014E0036A2D0 /* Starscream */,
 			);
 			productName = SoftLight;
 			productReference = AF0192F0273EBE9B0036A2D0 /* SoftLight.app */;
@@ -236,6 +251,7 @@
 			);
 			mainGroup = AF0192E7273EBE9B0036A2D0;
 			packageReferences = (
+				AF019335274B014E0036A2D0 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = AF0192F1273EBE9B0036A2D0 /* Products */;
 			projectDirPath = "";
@@ -279,6 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0193342746AFC20036A2D0 /* DeviceCollection.swift in Sources */,
+				AF0193322745DBB20036A2D0 /* Device+CoreDataProperties.swift in Sources */,
 				AF019323273EF4170036A2D0 /* WebSocketHandler.swift in Sources */,
 				AF019329273F00530036A2D0 /* DetailView.swift in Sources */,
 				AF019327273EFB820036A2D0 /* Styles.swift in Sources */,
@@ -287,6 +305,8 @@
 				AF0192F6273EBE9B0036A2D0 /* ContentView.swift in Sources */,
 				AF019300273EBE9D0036A2D0 /* SoftLight.xcdatamodeld in Sources */,
 				AF0192F4273EBE9B0036A2D0 /* SoftLightApp.swift in Sources */,
+				AF01932E2745D7520036A2D0 /* SoftLightProtocol.swift in Sources */,
+				AF0193302745DBA30036A2D0 /* Device+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF019335274B014E0036A2D0 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF019336274B014E0036A2D0 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF019335274B014E0036A2D0 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AF0192FE273EBE9D0036A2D0 /* SoftLight.xcdatamodeld */ = {

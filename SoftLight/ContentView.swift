@@ -10,15 +10,10 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Device.friendlyName, ascending: true)],
-        animation: .default)
-    private var devices: FetchedResults<Device>
+    
+    @EnvironmentObject var deviceCollection: DeviceCollection
     
     @State private var showingAddDevice = false
-    
-    @StateObject var websockethandler = WebSocketHandler()
 
     var body: some View {
         NavigationView {
@@ -27,12 +22,12 @@ struct ContentView: View {
                 VStack{
                     Text("SoftLight").padding(.top, -40).titleStyle()
                     List {
-                        ForEach(devices) { device in
+                        ForEach(deviceCollection.deviceCollection, id: \.ip) { device in
                             NavigationLink(destination: DetailView(device: device)) {
-                                Text(device.friendlyName ?? "-")
+                                Text(device.friendlyName)
                             }
                         }
-                        .onDelete(perform: deleteItems)
+//                        .onDelete(perform: deleteItems)
                         
                     }
                     .toolbar {
@@ -46,7 +41,7 @@ struct ContentView: View {
                         }
                     }
                     .sheet(isPresented: $showingAddDevice){
-                        AddView().environment(\.managedObjectContext, self.viewContext)
+                        AddView().environment(\.managedObjectContext, self.viewContext).environmentObject(deviceCollection)
                     }
                 }
             }
@@ -57,13 +52,11 @@ struct ContentView: View {
     init() {
         UITableView.appearance().backgroundColor = UIColor.clear
         
-        websockethandler.createWebsockets(devices: ["mirror.local"])
-        websockethandler.connectAll()
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    /*private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { devices[$0] }.forEach(viewContext.delete)
+            offsets.map { deviceCollection[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -74,16 +67,8 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }
+    }*/
 }
-
-
-//thoughts:
-// OnAppear: tell WSHander to connect to ALL
-// When clicking to DetailView, hand it the appropriate WS connection
-
-
-
 
 
 

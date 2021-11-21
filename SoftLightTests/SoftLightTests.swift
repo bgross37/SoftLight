@@ -34,19 +34,6 @@ class SoftLightTests: XCTestCase {
         
         XCTAssertEqual(message.generateStringMessage(), "#FFFFFFFF")
     }
-    
-    
-    func testRequestMessage() {
-        let connection = WebSocketConnection(ip: "1")
-        let response = connection.requestStatus()
-        
-        print(response.hue)
-        print(response.sat)
-        print(response.val)
-        print(response.white)
-
-        XCTAssertEqual(response, PackedMessage(hue: 18, sat: 52, val: 86, white: 255))
-    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

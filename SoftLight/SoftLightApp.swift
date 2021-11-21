@@ -10,12 +10,13 @@ import SwiftUI
 @main
 struct SoftLightApp: App {
     @Environment(\.scenePhase) var scenePhase
+    @StateObject var deviceCollection: DeviceCollection
     
     let persistenceController = PersistenceController.shared
     
     init() {
-        //make array of established devices
-        //connect the websockets
+        let deviceColectionTemp = DeviceCollection(managedObjectContext: persistenceController.container.viewContext)
+        self._deviceCollection = StateObject(wrappedValue: deviceColectionTemp)
         
     }
 
@@ -23,6 +24,7 @@ struct SoftLightApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(deviceCollection)
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
