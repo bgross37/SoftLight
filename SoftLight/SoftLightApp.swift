@@ -33,12 +33,19 @@ struct SoftLightApp: App {
                     //reconnect websockets
                 case .inactive:
                     print("App is inactive")
-                    //disconnect websockets
+                    for device in deviceCollection.deviceCollection {
+                        device.disconnect()
+                    }
                 case .background:
                     print("App is in background")
-                    //disconnect websockets
+                    for device in deviceCollection.deviceCollection {
+                        device.disconnect()
+                    }
                 @unknown default:
                     print("Oh - interesting: I received an unexpected new value.")
+                    for device in deviceCollection.deviceCollection {
+                        device.disconnect()
+                    }
             }
         }
     }

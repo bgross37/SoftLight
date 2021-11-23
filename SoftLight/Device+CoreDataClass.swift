@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-import Starscream
 
 @objc(Device)
 public class Device: NSManagedObject {
@@ -16,24 +15,13 @@ public class Device: NSManagedObject {
     @Published var sat: Double = 0
     @Published var val: Double = 0
     @Published var white: Double = 0
+    @Published var type: Int = 0
     
     private let session: URLSession = URLSession(configuration: .default)
     var socket: URLSessionWebSocketTask!
     
-    /*
-    init(context: NSManagedObjectContext){
-        super.init(entity: NSEntityDescription.entity(forEntityName: "Device", in: context)!, insertInto: context)
-    }
-    
-    init(context: NSManagedObjectContext, ip: String, friendlyname: String){
-        super.init(entity: NSEntityDescription.entity(forEntityName: "Device", in: context)!, insertInto: context)
-        self.ip = ip
-        self.friendlyName = friendlyname
-    }
-    */
-    
     func connect(){
-        self.socket = session.webSocketTask(with: URL(string: "ws://\(self.ip)")!)
+        self.socket = session.webSocketTask(with: URL(string: "ws://\(self.ip):81")!)
         self.socket.resume()
         self.listen()
         self.requestStatus()
@@ -67,6 +55,7 @@ public class Device: NSManagedObject {
                         self.sat = Double(message.sat)
                         self.val = Double(message.val)
                         self.white = Double(message.white)
+                        self.type = Int(message.type)
                     @unknown default:
                         break
                 }

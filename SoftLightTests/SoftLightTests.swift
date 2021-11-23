@@ -34,6 +34,16 @@ class SoftLightTests: XCTestCase {
         
         XCTAssertEqual(message.generateStringMessage(), "#FFFFFFFF")
     }
+    
+    func testMessageReadRed() {
+        let message1 = PackedMessage(hexString: "R1#01020304")
+        
+        let message = PackedMessage(hue: 1, sat: 2, val: 3, white: 4, type: 1)
+        
+        print("Received type: \(message1.type)")
+        
+        XCTAssertEqual(message.generateStringMessage(), message1.generateStringMessage())
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

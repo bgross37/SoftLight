@@ -14,9 +14,10 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<8 {
-            let newDevice = Device()
+            let newDevice = Device(context: viewContext)
             newDevice.ip = "123"
             newDevice.friendlyName = "TestDevice"
+            newDevice.type = 1
         }
         /*do {
             try viewContext.save()
